@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Your Site Name",
+  name: "TLDR",
+  tagline: "Read smarter, not longer",
   description:
-    "A modern, accessible landing page template built with Next.js, Tailwind CSS, and TypeScript.",
+    "AI-powered summaries for articles, videos, and documents. Save hours every week.",
   url: "https://example.com",
   ogImage: "/og-image.png",
-  creator: "@yourhandle",
+  creator: "@tldr",
   authors: [
     {
-      name: "Your Name",
+      name: "TLDR Technologies",
       url: "https://example.com",
     },
   ],
   keywords: [
-    "landing page",
-    "template",
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "TypeScript",
+    "AI summarizer",
+    "article summary",
+    "TLDR",
+    "content summarization",
+    "productivity",
+    "reading assistant",
   ],
 } as const;
 
