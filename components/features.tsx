@@ -47,7 +47,7 @@ function FeatureCard({
 }): ReactNode {
   return (
     <motion.div
-      className="bg-muted grid grid-cols-1 gap-2 rounded-2xl p-2 md:grid-cols-2 transition-colors duration-300 hover:bg-muted/80"
+      className="bg-muted grid grid-cols-1 gap-2 overflow-hidden rounded-2xl p-2 md:grid-cols-2 transition-colors duration-300 hover:bg-muted/80"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.01 }}
@@ -70,12 +70,13 @@ function FeatureCard({
         </p>
       </div>
 
-      <div className="bg-background relative min-h-60 h-full overflow-hidden rounded-xl">
+      <div className="relative aspect-4/3 w-full self-stretch overflow-hidden rounded-xl md:aspect-auto">
         <Image
           src={feature.image}
           alt={feature.title}
           fill
-          className="object-cover grayscale"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="relative! h-full! w-full! object-cover grayscale md:absolute!"
         />
       </div>
     </motion.div>
