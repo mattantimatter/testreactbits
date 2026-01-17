@@ -355,7 +355,7 @@ const RotatingCards: React.FC<RotatingCardsProps> = ({
                   }
                 : {})}
             >
-              <div className="w-full h-full flex items-center justify-center p-4">
+              <div className="w-full h-full">
                 {card.content}
               </div>
             </motion.div>

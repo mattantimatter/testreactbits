@@ -2,6 +2,7 @@
 
 import { ChevronRightIcon } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
@@ -10,6 +11,7 @@ interface Feature {
   number: string;
   title: string;
   description: string;
+  image: string;
 }
 
 const features: Feature[] = [
@@ -18,18 +20,21 @@ const features: Feature[] = [
     title: "Summarize content",
     description:
       "Articles, videos, podcasts, PDFs, research papers — TLDR handles them all.",
+    image: "/img/article-summary.webp",
   },
   {
     number: "02",
     title: "Extract insights",
     description:
       "Get the main points, not just a shortened version. Summaries that save you time.",
+    image: "/img/research-papers.webp",
   },
   {
     number: "03",
     title: "Save & organize",
     description:
       "Build your personal knowledge library. Tag, search, and revisit summaries anytime.",
+    image: "/img/book-summary.webp",
   },
 ];
 
@@ -65,8 +70,13 @@ function FeatureCard({
         </p>
       </div>
 
-      <div className="bg-background flex min-h-60 h-full items-center justify-center rounded-xl">
-        <span className="text-muted-foreground text-sm">Preview</span>
+      <div className="bg-background relative min-h-60 h-full overflow-hidden rounded-xl">
+        <Image
+          src={feature.image}
+          alt={feature.title}
+          fill
+          className="object-cover grayscale"
+        />
       </div>
     </motion.div>
   );

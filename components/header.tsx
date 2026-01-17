@@ -168,7 +168,7 @@ function MenuCard({ card }: { card: (typeof menuCards)[number] }): ReactNode {
 function MobileSignUpButton(): ReactNode {
   return (
     <motion.div
-      className="pt-2 min-[1080px]:hidden"
+      className="col-span-full flex items-center justify-center gap-2 pt-2"
       variants={{
         hidden: { opacity: 0, y: 20 },
         visible: {
@@ -180,9 +180,29 @@ function MobileSignUpButton(): ReactNode {
     >
       <Link
         href="#"
-        className="bg-accent block w-full rounded-full px-5 py-3 text-center text-sm font-medium text-black"
+        className="text-background rounded-[3.5px] bg-background/10 px-6 py-3 text-xl font-medium tracking-tight transition-colors"
       >
         Sign Up
+      </Link>
+      <Link
+        href="#"
+        className="group bg-accent relative rounded-[3.5px] px-6 py-3 text-xl font-medium tracking-tight text-black transition-all duration-500 hover:rounded-[50px]"
+      >
+        <span
+          className="relative block h-[1.25em] overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, transparent, black 25%, black 75%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent, black 25%, black 75%, transparent)",
+          }}
+        >
+          <span className="flex flex-col duration-0 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2/3 group-hover:transition-transform group-hover:duration-300">
+            <span className="block leading-[1.25em]">Try It</span>
+            <span className="block leading-[1.25em]">Try It</span>
+            <span className="block leading-[1.25em]">Try It</span>
+          </span>
+        </span>
       </Link>
     </motion.div>
   );
@@ -247,14 +267,20 @@ export function Header(): ReactNode {
         }}
       >
         <motion.nav
-          className="bg-foreground shadow-2xl/20 border border-neutral-800 flex max-w-6xl flex-col overflow-hidden rounded-md"
+          className="bg-foreground shadow-2xl/20 border border-neutral-200/10 flex max-w-6xl flex-col overflow-hidden rounded-md"
           initial={false}
           animate={{ 
             width: isMenuOpen ? "100%" : hasScrolled ? "56rem" : "42rem",
           }}
           transition={{ ...spring, delay: isMenuOpen ? 0 : 0.15 }}
         >
-          <div className="flex w-full items-center justify-between py-2 pr-2 pl-2">
+          <div className="flex w-full items-center justify-between py-2 pr-2 pl-4">
+            <Link href="/">
+              <span className="text-background text-4xl font-extrabold -tracking-widest">
+                TLDR
+              </span>
+            </Link>
+
             <button
               className="text-background/80 hover:text-background flex h-full cursor-pointer items-center gap-2 rounded-[3.5px] px-2 transition-colors hover:bg-white/10"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -262,41 +288,6 @@ export function Header(): ReactNode {
               <HamburgerIcon isOpen={isMenuOpen} />
               <span className="text-xl font-medium tracking-tight">Menu</span>
             </button>
-
-            <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-              <span className="text-background text-4xl font-extrabold -tracking-widest">
-                TLDR
-              </span>
-            </Link>
-
-            <div className="flex items-center gap-1">
-              <Link
-                href="#"
-                className="text-background/80 hover:text-background hidden rounded-full px-5 py-2 text-xl font-medium tracking-tight transition-colors min-[1080px]:block"
-              >
-                Sign Up
-              </Link>
-              <Link
-                href="#"
-                className="group bg-accent relative rounded-[3.5px] px-6 py-3 text-xl font-medium tracking-tight text-black transition-all duration-500 hover:rounded-[50px]"
-              >
-                <span
-                  className="relative block h-[1.25em] overflow-hidden"
-                  style={{
-                    maskImage:
-                      "linear-gradient(to bottom, transparent, black 25%, black 75%, transparent)",
-                    WebkitMaskImage:
-                      "linear-gradient(to bottom, transparent, black 25%, black 75%, transparent)",
-                  }}
-                >
-                  <span className="flex flex-col duration-0 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2/3 group-hover:transition-transform group-hover:duration-300">
-                    <span className="block leading-[1.25em]">Try It</span>
-                    <span className="block leading-[1.25em]">Try It</span>
-                    <span className="block leading-[1.25em]">Try It</span>
-                  </span>
-                </span>
-              </Link>
-            </div>
           </div>
 
           <AnimatePresence>
