@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "TLDR",
+  name: "React Bits Pro - Minimal Template",
   tagline: "Read smarter, not longer",
   description:
     "AI-powered summaries for articles, videos, and documents. Save hours every week.",
