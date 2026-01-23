@@ -49,16 +49,19 @@ const plans: Plan[] = [
 function PlanCard({ plan }: { plan: Plan }): ReactNode {
   return (
     <motion.div
-      className={`rounded-2xl p-6 md:p-8 transition-all duration-300 ${
+      className={`rounded-2xl p-6 md:p-8 ${
         plan.highlighted
-          ? "border-accent bg-background border-2 hover:border-accent/80 hover:shadow-lg hover:shadow-accent/10"
-          : "bg-background hover:bg-background/80"
+          ? "border-accent bg-background border-2 transition-[border-color,box-shadow] duration-300 hover:border-accent/80 hover:shadow-lg hover:shadow-accent/10"
+          : "bg-background transition-[background-color] duration-300 hover:bg-background/80"
       }`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ y: -4 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, ease: easeOut }}
+      transition={{
+        opacity: { duration: 0.6, ease: easeOut },
+        y: { duration: 0.3, ease: easeOut },
+      }}
     >
       <div className="mb-6">
         <h3 className="text-lg font-medium">{plan.name}</h3>
