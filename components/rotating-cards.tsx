@@ -59,6 +59,7 @@ const RotatingCards: React.FC<RotatingCardsProps> = ({
   const [isHovered, setIsHovered] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const rotationRef = useRef(initialRotation);
@@ -103,6 +104,11 @@ const RotatingCards: React.FC<RotatingCardsProps> = ({
       // Will be set to false and then loaded after preload
     }
   }
+
+  // Handle client-side mounting to prevent hydration mismatches
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!hasImages) {
@@ -303,7 +309,7 @@ const RotatingCards: React.FC<RotatingCardsProps> = ({
         onDrag={handleDrag}
         onDragEnd={handleDragEnd}
       >
-        {cards.map((card, index) => {
+        {isMounted && cards.map((card, index) => {
           const position = cardPositions[index];
           if (!position) return null;
 
