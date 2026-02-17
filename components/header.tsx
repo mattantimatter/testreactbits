@@ -96,7 +96,13 @@ function GitHubIcon({ className }: { className?: string }): ReactNode {
   );
 }
 
-function MenuCard({ card }: { card: (typeof menuCards)[number] }): ReactNode {
+function MenuCard({
+  card,
+  onLinkClick,
+}: {
+  card: (typeof menuCards)[number];
+  onLinkClick: () => void;
+}): ReactNode {
   return (
     <motion.div
       className="bg-menu-card min-h-50 rounded-2xl p-6 min-[1080px]:min-h-80"
@@ -117,9 +123,17 @@ function MenuCard({ card }: { card: (typeof menuCards)[number] }): ReactNode {
         <div className="mt-6 flex h-[calc(100%-2rem)] flex-col justify-between pb-4">
           <Link
             href="mailto:operators@antimatterai.com"
+            onClick={onLinkClick}
             className="text-background hover:text-background/70 text-xl font-semibold transition-colors md:text-2xl"
           >
             operators@antimatterai.com
+          </Link>
+          <Link
+            href="/admin-login"
+            onClick={onLinkClick}
+            className="text-background hover:text-background/70 mt-4 block text-base font-medium transition-colors"
+          >
+            Admin Login
           </Link>
           <div className="mt-auto flex items-center gap-4 pt-8">
             {socialLinks.map(({ label, icon: Icon, href }) => (
@@ -142,6 +156,7 @@ function MenuCard({ card }: { card: (typeof menuCards)[number] }): ReactNode {
             <li key={link.label}>
               <Link
                 href={link.href}
+                onClick={onLinkClick}
                 className="group text-background hover:text-background/70 flex items-center justify-between py-4 text-xl font-semibold transition-all duration-300 md:text-2xl"
               >
                 <span className="flex items-center gap-3 transition-transform duration-300 group-hover:translate-x-1">
@@ -165,7 +180,7 @@ function MenuCard({ card }: { card: (typeof menuCards)[number] }): ReactNode {
   );
 }
 
-function MobileSignUpButton(): ReactNode {
+function MobileSignUpButton({ onLinkClick }: { onLinkClick: () => void }): ReactNode {
   return (
     <motion.div
       className="col-span-full flex items-center justify-center gap-2 pt-2"
@@ -180,12 +195,14 @@ function MobileSignUpButton(): ReactNode {
     >
       <Link
         href="#"
+        onClick={onLinkClick}
         className="text-background rounded-[3.5px] bg-background/10 px-6 py-3 text-xl font-medium tracking-tight transition-colors"
       >
         Request Demo
       </Link>
       <Link
         href="#"
+        onClick={onLinkClick}
         className="group bg-accent relative rounded-[3.5px] px-6 py-3 text-xl font-medium tracking-tight text-black transition-all duration-500 hover:rounded-[50px]"
       >
         <span
@@ -237,6 +254,10 @@ export function Header(): ReactNode {
     };
   }, []);
 
+  const closeMenu = (): void => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -275,8 +296,10 @@ export function Header(): ReactNode {
           transition={{ ...spring, delay: isMenuOpen ? 0 : 0.15 }}
         >
           <div className="flex w-full items-center justify-between py-2 pr-2 pl-4">
-            <Link href="/">
-              <span className="text-background text-4xl font-extrabold -tracking-widest">
+            <Link href="/" onClick={closeMenu}>
+              <span
+                className="text-background text-4xl font-extrabold -tracking-widest"
+              >
                 ANTIMATTERAI
               </span>
             </Link>
@@ -334,9 +357,9 @@ export function Header(): ReactNode {
                     }}
                   >
                     {menuCards.map((card) => (
-                      <MenuCard key={card.id} card={card} />
+                      <MenuCard key={card.id} card={card} onLinkClick={closeMenu} />
                     ))}
-                    <MobileSignUpButton />
+                    <MobileSignUpButton onLinkClick={closeMenu} />
                   </motion.div>
                 </div>
               </motion.div>
