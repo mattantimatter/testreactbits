@@ -33,19 +33,19 @@ const menuCards = [
     id: "products",
     title: "CAPABILITIES",
     links: [
-      { label: "Model-agnostic orchestration", href: "#", badge: null },
-      { label: "Compliance-ready by design", href: "#", badge: "NEW" },
-      { label: "Full observability + replay", href: "#", badge: null },
+      { label: "Model-agnostic orchestration", href: "/explore/model-agnostic-orchestration", badge: null },
+      { label: "Compliance-ready by design", href: "/explore/compliance-ready-by-design", badge: "NEW" },
+      { label: "Full observability + replay", href: "/explore/full-observability-replay", badge: null },
     ],
   },
   {
     id: "resources",
     title: "FOCUS",
     links: [
-      { label: "Healthcare + RCM", href: "#", badge: null },
-      { label: "Biotech operations", href: "#", badge: null },
-      { label: "Security programs", href: "#", badge: null },
-      { label: "Mission-critical SaaS", href: "#", badge: null },
+      { label: "Healthcare + RCM", href: "/explore/healthcare-rcm", badge: null },
+      { label: "Biotech operations", href: "/explore/biotech-operations", badge: null },
+      { label: "Security programs", href: "/explore/security-programs", badge: null },
+      { label: "Mission-critical SaaS", href: "/explore/mission-critical-saas", badge: null },
     ],
   },
   {
