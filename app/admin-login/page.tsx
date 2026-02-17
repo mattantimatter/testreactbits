@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
 import type { ReactNode } from "react";
-
-const apiBaseUrl =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://your-backend-domain.com/api";
+import { AdminLoginForm } from "@/components/admin-login-form";
 
 export const metadata: Metadata = {
   title: "Admin Login",
@@ -39,12 +37,13 @@ export default function AdminLoginPage(): ReactNode {
                 Admin@123
               </p>
             </div>
+            <AdminLoginForm />
           </div>
 
           <div className="bg-muted rounded-2xl p-8">
             <h2 className="text-2xl font-medium tracking-tight">Login endpoint</h2>
             <p className="text-muted-foreground mt-6 break-all text-sm leading-relaxed">
-              POST {apiBaseUrl}/auth/login
+              POST NEXT_PUBLIC_API_BASE_URL/auth/login
             </p>
             <pre className="text-muted-foreground mt-4 overflow-x-auto rounded-md bg-black/5 p-4 text-xs">
 {`{
