@@ -17,31 +17,28 @@ interface Plan {
 
 const plans: Plan[] = [
   {
-    name: "Free",
-    tagline: "Get started with our free plan",
-    price: "$0",
-    period: "month",
+    name: "Enablement Core",
+    tagline: "Primary sale: operating model + workforce enablement",
+    price: "Custom",
+    period: "program",
     features: [
-      "10 summaries per day",
-      "Chrome extension",
-      "Articles & blogs",
-      "Basic support",
+      "Operating model: how humans delegate work to AI coworkers (requests, verification, escalation, handoff)",
+      "Corporate communications standards: AI-ready writing norms for tickets, memos, customer comms, compliance notes",
+      "Governance scaffolding: access controls, audit trails, replay, incident response, adoption + quality metrics",
+      "Easy to approve procurement path with clear accountability and measurable outcomes",
     ],
   },
   {
-    name: "Pro",
-    tagline: "Get everything out of TLDR",
-    price: "$6",
-    period: "month",
+    name: "Enablement + Delivery",
+    tagline: "Implementation available when needed",
+    price: "Custom",
+    period: "engagement",
     highlighted: true,
     features: [
-      "Unlimited summaries",
-      "Chrome & Safari extensions",
-      "Videos, podcasts & PDFs",
-      "Multi-language support",
-      "API access",
-      "Priority support",
-      "Export to Notion & Obsidian",
+      "Voice and workflow deployment modules inside contract-backed programs",
+      "Regulated operations packaging for healthcare/RCM, biotech, security, and mission-critical SaaS",
+      "Governed execution handoff: logs, replay, approvals, exceptions, and human override",
+      "Not a commodity lane: no head-on consumer agent competition",
     ],
   },
 ];
@@ -106,10 +103,11 @@ export function Pricing(): ReactNode {
           transition={{ duration: 0.6, ease: easeOut }}
         >
           <h2 className="mb-4 text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl">
-            Pricing
+            Human&lt;-&gt;AI Workforce Enablement
           </h2>
           <p className="text-muted-foreground text-lg">
-            Start for free and upgrade to unlock more features.
+            The bottleneck isn&apos;t intelligence-it&apos;s safe delegation, adoption,
+            and accountability.
           </p>
         </motion.div>
 
@@ -134,7 +132,7 @@ export function Pricing(): ReactNode {
             href="#"
             className="group inline-flex w-full items-center justify-center gap-3 rounded-md bg-accent py-3 pl-5 pr-3 font-medium text-black transition-all duration-500 ease-out hover:rounded-[50px] hover:shadow-lg hover:shadow-accent/20 sm:w-auto"
           >
-            <span>Go Pro</span>
+            <span>Book a call</span>
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black transition-all duration-300 group-hover:scale-110">
               <ChevronRightIcon className="h-4 w-4 relative left-px" />
             </span>
@@ -143,7 +141,7 @@ export function Pricing(): ReactNode {
             href="#"
             className="text-muted-foreground text-sm transition-colors hover:text-foreground"
           >
-            Start For Free
+            Request a demo
           </a>
         </motion.div>
       </div>

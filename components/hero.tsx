@@ -8,20 +8,20 @@ import DitherCursor from "./dither-cursor";
 import RotatingCards, { type Card } from "./rotating-cards";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
-const headlineText = "No More Time To Waste";
+const headlineText = "AntimatterAI: The Nervous System + Spine for Deployed AI";
 
 const cardData = [
-  { label: "Chrome Extension", image: "/img/chrome-extension.webp" },
-  { label: "Safari Extension", image: "/img/safari-extension.webp" },
-  { label: "API Access", image: "/img/api-access.webp" },
-  { label: "Article Summary", image: "/img/article-summary.webp" },
-  { label: "Video Summary", image: "/img/video-summary.webp" },
-  { label: "Podcast Summary", image: "/img/podcast-summary.webp" },
-  { label: "PDF Summary", image: "/img/pdf-summary.webp" },
-  { label: "Research Papers", image: "/img/research-papers.webp" },
-  { label: "Social Threads", image: "/img/social-threads.webp" },
-  { label: "Email Digest", image: "/img/email-digest.webp" },
-  { label: "Book Summary", image: "/img/book-summary.webp" },
+  { label: "Grok (xAI)", image: "/img/chrome-extension.webp" },
+  { label: "ChatGPT (OpenAI)", image: "/img/safari-extension.webp" },
+  { label: "Claude (Anthropic)", image: "/img/api-access.webp" },
+  { label: "Voice Agents", image: "/img/article-summary.webp" },
+  { label: "Workflow Agents", image: "/img/video-summary.webp" },
+  { label: "Enterprise Security", image: "/img/podcast-summary.webp" },
+  { label: "Model-agnostic orchestration", image: "/img/pdf-summary.webp" },
+  { label: "Compliance-ready by design", image: "/img/research-papers.webp" },
+  { label: "Regulated ops focus", image: "/img/social-threads.webp" },
+  { label: "Full observability + replay", image: "/img/email-digest.webp" },
+  { label: "Governed execution", image: "/img/book-summary.webp" },
 ];
 
 const carouselCards: Card[] = cardData.map((card, index) => ({
@@ -140,18 +140,9 @@ export function Hero(): ReactNode {
           }}
           className="text-muted-foreground mx-auto mt-6 max-w-xl text-2xl leading-12 tracking-tight md:text-3xl"
         >
-          <span className="text-foreground bg-foreground/5 inline-block rounded-md px-2 py-0.5 leading-10">
-            Read less
-          </span>{" "}
-          &{" "}
-          <span className="text-foreground bg-foreground/5 inline-block rounded-full px-4 py-0.5 leading-10">
-            know more
-          </span>{" "}
-          Save{" "}
-          <span className="text-foreground bg-foreground/5 inline-block rounded-md px-2 py-0.5 leading-10">
-            hours
-          </span>{" "}
-          every week with AI summaries done right.
+          Transform Grok, Claude, and ChatGPT from brains into governed,
+          auditable digital workers wired into your phones, EHRs, CRMs, billing
+          systems, and mission-critical SaaS.
         </motion.p>
       </div>
 
@@ -192,8 +183,9 @@ export function Hero(): ReactNode {
         transition={{ duration: 0.8, ease: easeOut }}
       >
         <h2 className="max-w-3xl text-3xl font-medium tracking-tight md:text-5xl lg:text-6xl">
-          Turn Hours of Content <br />
-          Into Fast Insight
+          The Brains
+          <br />
+          Need Wiring
         </h2>
         <motion.a
           href="#"
@@ -203,7 +195,7 @@ export function Hero(): ReactNode {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: easeOut, delay: 0.2 }}
         >
-          <span>Get Started Free</span>
+          <span>Talk to the operators</span>
           <span className="bg-background text-foreground flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110">
             <ChevronRightIcon className="relative left-px h-4 w-4" />
           </span>

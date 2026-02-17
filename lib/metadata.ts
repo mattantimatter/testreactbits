@@ -1,33 +1,35 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "React Bits Pro - Minimal Template",
-  tagline: "Read smarter, not longer",
+  name: "AntimatterAI",
+  tagline: "The nervous system that turns frontier models into deployed digital workers.",
   description:
-    "AI-powered summaries for articles, videos, and documents. Save hours every week.",
+    "AntimatterAI wires frontier models into governed, auditable execution across phones, EHRs, CRMs, billing, and mission-critical SaaS deployable in your VPC, edge, or on-prem.",
   url: "https://example.com",
   ogImage: "/og-image.png",
-  creator: "@tldr",
+  creator: "@antimatterai",
   authors: [
     {
-      name: "TLDR Technologies",
+      name: "AntimatterAI",
       url: "https://example.com",
     },
   ],
   keywords: [
-    "AI summarizer",
-    "article summary",
-    "TLDR",
-    "content summarization",
-    "productivity",
-    "reading assistant",
+    "AntimatterAI",
+    "governed AI workers",
+    "model orchestration",
+    "human in the loop",
+    "regulated AI execution",
+    "auditability and replay",
   ],
 } as const;
+
+const seoTitle = "AntimatterAI — The Nervous System for Deployed AI Workers";
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: seoTitle,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,

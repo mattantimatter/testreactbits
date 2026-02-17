@@ -11,7 +11,7 @@ import { createMetadata, siteConfig } from "@/lib/metadata";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = createMetadata({
-  title: `${siteConfig.name} - ${siteConfig.tagline}`,
+  title: "AntimatterAI — The Nervous System for Deployed AI Workers",
   description: siteConfig.description,
   path: "/",
 });

@@ -8,29 +8,29 @@ const easeOut = [0.16, 1, 0.3, 1] as const;
 
 const faqs = [
   {
-    question: "How does TLDR summarize content?",
+    question: "Why not just deploy a general-purpose consumer agent?",
     answer:
-      "TLDR uses advanced AI models to analyze and extract key information from any article, video, or document. Our algorithms identify the most important points and present them in a concise, easy-to-read format.",
+      "We do not compete in commodity consumer agent lanes. Our advantage is governed execution in regulated operations where auditability, controls, and domain workflows decide outcomes.",
   },
   {
-    question: "Is my data private and secure?",
+    question: "What makes AntimatterAI defensible?",
     answer:
-      "Absolutely. We process content locally whenever possible and never store your browsing history or personal data. All connections are encrypted, and we're fully GDPR compliant.",
+      "Our moat is governance plus domain execution: policy enforcement, least-privilege access, replay, HITL approvals, and full audit trails tied to business systems.",
   },
   {
-    question: "Can I use TLDR on any website?",
+    question: "How do you handle security and compliance risk?",
     answer:
-      "Yes! TLDR works on virtually any website with text content. This includes news articles, blog posts, research papers, documentation, and even YouTube video transcripts.",
+      "No access without least-privilege controls, logging, replay, and explicit policy sign-off-especially for PHI and high-risk actions.",
   },
   {
-    question: "What's included in the free plan?",
+    question: "Can we run this inside our own infrastructure?",
     answer:
-      "The free plan includes 10 summaries per day, basic summarization features, and access to both Chrome and Safari extensions. No credit card required to get started.",
+      "Yes. Deploy in your VPC, on-prem, edge, or hybrid environment with data sovereignty and procurement-grade controls from day one.",
   },
   {
-    question: "How do I cancel my subscription?",
+    question: "Which domains are already proven?",
     answer:
-      "You can cancel anytime from your account settings. There are no cancellation fees, and you'll retain access to Pro features until the end of your billing period.",
+      "Battle-tested delivery across healthcare and RCM, biotech, security programs, and mission-critical B2B SaaS where reliability and traceability are mandatory.",
   },
 ];
 
@@ -107,7 +107,7 @@ export function FAQ(): ReactNode {
           transition={{ duration: 0.6, ease: easeOut }}
         >
           <h2 className="text-background text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl">
-            Common Questions
+            Trust by Design
           </h2>
         </motion.div>
 
@@ -137,13 +137,14 @@ export function FAQ(): ReactNode {
           transition={{ duration: 0.6, delay: 0.2, ease: easeOut }}
         >
           <p className="text-background/60 mb-6 text-base">
-            Still have questions? We&apos;re here to help.
+            Enterprises treat agents with account access as a liability. Our
+            stance is simple: govern every action before production.
           </p>
           <a
-            href="mailto:hello@tldr.app"
+            href="mailto:operators@antimatterai.com"
             className="group inline-flex items-center gap-3 rounded-md bg-background py-3 pl-5 pr-3 font-medium text-foreground shadow-lg transition-all duration-500 ease-out hover:rounded-[50px]"
           >
-            <span>Get in Touch</span>
+            <span>Talk to the operators</span>
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground text-background transition-all duration-300 group-hover:scale-110">
               <ChevronRightIcon className="h-4 w-4 relative left-px" />
             </span>

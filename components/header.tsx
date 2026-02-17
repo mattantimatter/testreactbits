@@ -31,26 +31,26 @@ function useIsDesktop(): boolean {
 const menuCards = [
   {
     id: "products",
-    title: "PRODUCTS",
+    title: "CAPABILITIES",
     links: [
-      { label: "Chrome Extension", href: "#", badge: null },
-      { label: "Safari Extension", href: "#", badge: "NEW" },
-      { label: "API Access", href: "#", badge: null },
+      { label: "Model-agnostic orchestration", href: "#", badge: null },
+      { label: "Compliance-ready by design", href: "#", badge: "NEW" },
+      { label: "Full observability + replay", href: "#", badge: null },
     ],
   },
   {
     id: "resources",
-    title: "RESOURCES",
+    title: "FOCUS",
     links: [
-      { label: "Documentation", href: "#", badge: null },
-      { label: "Changelog", href: "#", badge: null },
-      { label: "Pricing", href: "#", badge: null },
-      { label: "Blog", href: "#", badge: null },
+      { label: "Healthcare + RCM", href: "#", badge: null },
+      { label: "Biotech operations", href: "#", badge: null },
+      { label: "Security programs", href: "#", badge: null },
+      { label: "Mission-critical SaaS", href: "#", badge: null },
     ],
   },
   {
     id: "contact",
-    title: "CONTACT",
+    title: "OPERATORS",
     links: [],
   },
 ];
@@ -116,10 +116,10 @@ function MenuCard({ card }: { card: (typeof menuCards)[number] }): ReactNode {
       {card.id === "contact" && (
         <div className="mt-6 flex h-[calc(100%-2rem)] flex-col justify-between pb-4">
           <Link
-            href="mailto:hello@tldr.app"
+            href="mailto:operators@antimatterai.com"
             className="text-background hover:text-background/70 text-xl font-semibold transition-colors md:text-2xl"
           >
-            hello@tldr.app
+            operators@antimatterai.com
           </Link>
           <div className="mt-auto flex items-center gap-4 pt-8">
             {socialLinks.map(({ label, icon: Icon, href }) => (
@@ -182,7 +182,7 @@ function MobileSignUpButton(): ReactNode {
         href="#"
         className="text-background rounded-[3.5px] bg-background/10 px-6 py-3 text-xl font-medium tracking-tight transition-colors"
       >
-        Sign Up
+        Request Demo
       </Link>
       <Link
         href="#"
@@ -198,9 +198,9 @@ function MobileSignUpButton(): ReactNode {
           }}
         >
           <span className="flex flex-col duration-0 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2/3 group-hover:transition-transform group-hover:duration-300">
-            <span className="block leading-[1.25em]">Try It</span>
-            <span className="block leading-[1.25em]">Try It</span>
-            <span className="block leading-[1.25em]">Try It</span>
+            <span className="block leading-[1.25em]">Book a Call</span>
+            <span className="block leading-[1.25em]">Book a Call</span>
+            <span className="block leading-[1.25em]">Book a Call</span>
           </span>
         </span>
       </Link>
@@ -277,7 +277,7 @@ export function Header(): ReactNode {
           <div className="flex w-full items-center justify-between py-2 pr-2 pl-4">
             <Link href="/">
               <span className="text-background text-4xl font-extrabold -tracking-widest">
-                TLDR
+                ANTIMATTERAI
               </span>
             </Link>
 
@@ -286,7 +286,7 @@ export function Header(): ReactNode {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <HamburgerIcon isOpen={isMenuOpen} />
-              <span className="text-xl font-medium tracking-tight">Menu</span>
+              <span className="text-xl font-medium tracking-tight">Explore</span>
             </button>
           </div>
 

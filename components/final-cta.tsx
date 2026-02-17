@@ -46,7 +46,7 @@ export function FinalCTA(): ReactNode {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: easeOut }}
           >
-            Ready to save hours every week?
+            Ready to deploy governed AI workers?
           </motion.h2>
 
           <motion.p
@@ -56,8 +56,8 @@ export function FinalCTA(): ReactNode {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2, ease: easeOut }}
           >
-            Join thousands who read smarter. Install the extension and start
-            summarizing in seconds.
+            Bring your preferred models. We&apos;ll bring the spine:
+            orchestration, security, and execution in production.
           </motion.p>
 
           <motion.a
@@ -69,7 +69,7 @@ export function FinalCTA(): ReactNode {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3, ease: easeOut }}
           >
-            <span>Add to Chrome</span>
+            <span>Book a call</span>
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-black transition-all duration-300 group-hover:scale-110">
               <ChevronRightIcon className="h-4 w-4 relative left-px" />
             </span>

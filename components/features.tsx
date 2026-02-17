@@ -17,23 +17,23 @@ interface Feature {
 const features: Feature[] = [
   {
     number: "01",
-    title: "Summarize content",
+    title: "Voice Agents",
     description:
-      "Articles, videos, podcasts, PDFs, research papers — TLDR handles them all.",
+      "Real-time conversations • Phone system integration • HIPAA-ready recording + retention controls • Multi-language support",
     image: "/img/article-summary.webp",
   },
   {
     number: "02",
-    title: "Extract insights",
+    title: "Workflow Agents",
     description:
-      "Get the main points, not just a shortened version. Summaries that save you time.",
+      "EHR automation • CRM orchestration • Billing + RCM workflows • Custom SaaS execution",
     image: "/img/research-papers.webp",
   },
   {
     number: "03",
-    title: "Save & organize",
+    title: "Enterprise Security",
     description:
-      "Build your personal knowledge library. Tag, search, and revisit summaries anytime.",
+      "VPC / on-prem / hybrid deployment • Complete audit trails • Data sovereignty • Policy enforcement + least privilege",
     image: "/img/book-summary.webp",
   },
 ];
@@ -96,17 +96,18 @@ export function Features(): ReactNode {
           transition={{ duration: 0.6, ease: easeOut }}
         >
           <h2 className="mb-4 text-2xl font-medium tracking-tight md:mb-6 md:text-3xl lg:text-4xl">
-            Turn insights into action
+            The Result: Digital Workers That Run in Production
           </h2>
           <p className="text-muted-foreground mb-6 max-w-sm text-base md:mb-8 md:text-lg">
-            TLDR helps you consume content faster and always extracts what
-            matters.
+            AntimatterAI wires those brains into real execution: phones, EHRs,
+            CRMs, billing, and critical SaaS-backed by policy, logging, audit
+            trails, and deployment in your VPC, edge, or on-prem.
           </p>
           <a
             href="#"
             className="bg-foreground group inline-flex w-full items-center justify-center gap-3 rounded-md py-3 pr-3 pl-5 font-medium text-background transition-all duration-500 ease-out hover:rounded-[50px] sm:w-auto"
           >
-            <span>Get Started Free</span>
+            <span>See how it works</span>
             <span className="bg-background text-foreground flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110">
               <ChevronRightIcon className="relative left-px h-4 w-4" />
             </span>

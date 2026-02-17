@@ -15,17 +15,17 @@ const fadeInUp = {
 };
 
 const productLinks = [
-  { label: "Chrome Extension", href: "#" },
-  { label: "Safari Extension", href: "#" },
-  { label: "API Access", href: "#" },
-  { label: "Enterprise", href: "#" },
+  { label: "Model-agnostic orchestration", href: "#" },
+  { label: "Compliance-ready by design", href: "#" },
+  { label: "Regulated ops focus", href: "#" },
+  { label: "Full observability + replay", href: "#" },
 ];
 
 const companyLinks = [
-  { label: "About", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Clinix AI (RCM + healthcare ops)", href: "#" },
+  { label: "OWASP platform work", href: "#" },
+  { label: "AVANT-style enablement patterns", href: "#" },
+  { label: "Mission-critical B2B SaaS", href: "#" },
 ];
 
 const socialLinks = [
@@ -65,14 +65,14 @@ export function Footer(): ReactNode {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <motion.div className="max-w-md" {...fadeInUp}>
             <p className="text-lg leading-relaxed text-black/80">
-              Ready to read smarter? TLDR transforms any article into a concise summary,
-              helping you stay informed without the time commitment.
+              The nervous system that turns frontier models into deployed
+              digital workers.
             </p>
             <Link
               href="#"
               className="group mt-8 inline-flex items-center gap-3 rounded-md bg-white py-3 pl-4 pr-3 font-medium shadow-lg shadow-black/10 transition-all duration-500 ease-out hover:rounded-[50px] hover:bg-white/90 hover:shadow-xl hover:shadow-black/20"
             >
-              <span>Get Started Free</span>
+              <span>Request a demo</span>
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-black transition-all duration-300 group-hover:scale-110">
                 <ChevronRightIcon className="h-4 w-4 relative left-px" />
               </span>
@@ -82,7 +82,7 @@ export function Footer(): ReactNode {
           <div className="grid grid-cols-2 gap-8 lg:justify-items-end">
             <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.1 }}>
               <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-black/50">
-                Product
+                Capabilities
               </h4>
               <ul className="space-y-3">
                 {productLinks.map((link) => (
@@ -99,7 +99,7 @@ export function Footer(): ReactNode {
             </motion.div>
             <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }}>
               <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-black/50">
-                Company
+                Ecosystem
               </h4>
               <ul className="space-y-3">
                 {companyLinks.map((link) => (
@@ -124,30 +124,30 @@ export function Footer(): ReactNode {
             <h2 className="text-6xl font-medium leading-none tracking-tight md:text-7xl lg:text-8xl">
               Reach
               <br />
-              Out To Us
+              The Operators
             </h2>
             <p className="mt-8 text-sm text-black/50">
-              © {new Date().getFullYear()} TLDR Technologies Inc.
+              © {new Date().getFullYear()} AntimatterAI
             </p>
           </motion.div>
 
           <div className="flex flex-col justify-between gap-8 lg:items-end lg:text-right">
             <motion.div className="space-y-6" {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.1 }}>
               <div>
-                <h4 className="mb-1 font-semibold">San Francisco</h4>
+                <h4 className="mb-1 font-semibold">Global</h4>
                 <p className="text-black/70">
-                  548 Market St, Suite 95000
+                  Battle-tested in healthcare, biotech, security,
                   <br />
-                  San Francisco, CA 94104
+                  and mission-critical B2B SaaS
                   <br />
-                  Mon-Fri 9:00 am - 6:00 pm (PST)
+                  Operator hours by engagement
                 </p>
               </div>
               <a
-                href="mailto:hello@tldr.app"
+                href="mailto:operators@antimatterai.com"
                 className="inline-block text-lg font-medium underline underline-offset-4 transition-opacity hover:opacity-70"
               >
-                hello@tldr.app
+                operators@antimatterai.com
               </a>
             </motion.div>
 

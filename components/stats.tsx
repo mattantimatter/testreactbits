@@ -7,25 +7,28 @@ const easeOut = [0.16, 1, 0.3, 1] as const;
 
 const stats = [
   {
-    value: 10,
-    suffix: "M+",
-    label: "Summaries Generated",
+    value: 1,
+    suffix: "",
+    label: "Grok (xAI) - Frontier intelligence via API for reasoning + chat.",
+    decimals: 0,
   },
   {
-    value: 50,
-    suffix: "K+",
-    label: "Active Users",
+    value: 1,
+    suffix: "",
+    label: "ChatGPT (OpenAI) - Best-in-class language understanding + generation.",
+    decimals: 0,
   },
   {
-    value: 4.9,
-    suffix: "★",
-    label: "Average Rating",
-    decimals: 1,
+    value: 1,
+    suffix: "",
+    label: "Claude (Anthropic) - Strong reasoning with safety-forward design.",
+    decimals: 0,
   },
   {
-    value: 98,
-    suffix: "%",
-    label: "Time Saved",
+    value: 1,
+    suffix: "",
+    label: "The challenge: brains need wiring-workflows, security, governance, and enterprise system access.",
+    decimals: 0,
   },
 ];
 
@@ -120,7 +123,7 @@ export function Stats(): ReactNode {
           transition={{ duration: 0.6, ease: easeOut }}
         >
           <h2 className="text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl">
-            Trusted by Readers Worldwide
+            The Brains
           </h2>
         </motion.div>
 

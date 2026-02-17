@@ -15,39 +15,39 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    title: "10 Hours Saved Every Week",
+    title: "We don't chase consumer agent wars.",
     description:
-      "I used to spend hours reading through research papers and articles. Now TLDR gives me the key insights in seconds. It's completely changed how I consume content.",
-    name: "Sarah Chen",
-    role: "Product Manager at Stripe",
+      "General-purpose agents will commoditize fast. We adopt patterns internally without fighting platform distribution.",
+    name: "Positioning",
+    role: "Where we don't compete",
   },
   {
-    title: "My Secret Productivity Weapon",
+    title: "We win in regulated execution.",
     description:
-      "As a busy professional, I don't have time to watch every video or read every article. TLDR lets me stay informed without the time commitment.",
-    name: "Marcus Johnson",
-    role: "Senior Engineer at Vercel",
+      "Our moat is governance + domain workflows: audit logs, replay, HITL controls, and measurable outcomes.",
+    name: "Positioning",
+    role: "Where we win",
   },
   {
-    title: "Works With Everything",
+    title: "We avoid thin-moat horizontals.",
     description:
-      "Articles, YouTube videos, podcasts, PDFs—TLDR handles it all. One tool for all my summarization needs. The consistency is remarkable.",
-    name: "Elena Rodriguez",
-    role: "Content Strategist at Notion",
+      "Generic lead-gen and CX agents are not defensible without captive distribution. We package them only as modules inside contract-backed programs.",
+    name: "Positioning",
+    role: "Commercial discipline",
   },
   {
-    title: "Actually Useful AI",
+    title: "Built in the Antimatter ecosystem",
     description:
-      "Unlike other AI tools that give generic responses, TLDR actually captures what matters. The summaries are accurate and save me from information overload.",
-    name: "David Park",
-    role: "Research Lead at OpenAI",
+      "Clinix AI (RCM + healthcare ops) • OWASP platform work (security credibility) • AVANT-style enablement patterns (AI coworkers at scale).",
+    name: "Proof",
+    role: "Ecosystem signals",
   },
   {
-    title: "Perfect for Research",
+    title: "Battle-tested domains",
     description:
-      "I go through dozens of papers weekly. TLDR helps me quickly identify which ones deserve a deeper read. It's become essential to my workflow.",
-    name: "Priya Sharma",
-    role: "PhD Candidate at MIT",
+      "Battle-tested in healthcare, biotech, security, and mission-critical B2B SaaS.",
+    name: "Proof",
+    role: "Delivery footprint",
   },
 ];
 
@@ -122,7 +122,7 @@ export function Testimonials() {
           transition={{ duration: 0.6, ease: easeOut }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-foreground">
-            What People Are Saying
+            Where We Win (and Where We Don&apos;t Compete)
           </h2>
 
           <div className="flex items-center gap-4">

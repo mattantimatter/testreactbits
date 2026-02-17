@@ -10,21 +10,21 @@ const easeOut = [0.16, 1, 0.3, 1] as const;
 const steps = [
   {
     icon: Download,
-    title: "Install the extension",
+    title: "Select Your Brain(s)",
     description:
-      "Add TLDR to Chrome or Safari with one click. No sign-up required to get started.",
+      "Use Grok, GPT, Claude-or multiple. We abstract the model layer so you're not locked in.",
   },
   {
     icon: MousePointer,
-    title: "Browse normally",
+    title: "Deploy to Your Infrastructure",
     description:
-      "Visit any article, video, or document. TLDR detects content automatically.",
+      "Run inside your VPC, hybrid cloud, edge, or on-prem-built for sovereignty and procurement scrutiny.",
   },
   {
     icon: Sparkles,
-    title: "Get your summary",
+    title: "Connect + Launch Governed Execution",
     description:
-      "One click delivers key takeaways. Save hours every week, effortlessly.",
+      "Wire agents into EHRs, CRMs, billing systems, phones, and internal tools with deterministic workflows, logs, replay, approvals, exceptions, and human override.",
   },
 ];
 
@@ -75,7 +75,7 @@ export function HowItWorks(): ReactNode {
           transition={{ duration: 0.6, ease: easeOut }}
         >
           <h2 className="text-3xl font-medium tracking-tight md:text-4xl lg:text-5xl">
-            Get Started
+            How It Works: Brain -&gt; Spine -&gt; Digital Worker
           </h2>
         </motion.div>
 

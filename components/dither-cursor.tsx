@@ -322,7 +322,7 @@ export default function DitherCursor({
   exponent = 3.0,
   decay = 0.005,
   intensity = 0.5,
-  color = "#ffd900",
+  color = "#a2a3e9",
   className,
   opacity = 1,
   position = "fixed",
